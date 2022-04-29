@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bildergalerie</title>
+    <style>
+        {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .column img {
+            margin-top: 12px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Menü*/
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<ul>
+    <li><a class="active" href="page1.html">Home</a></li>
+    <li><a href="page1.html">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+<div class="jumbotron text-center">
+    <h1>Bildergalerie</h1>
+    <p>Resize this responsive page to see the effect!</p>
+</div>
+
+
+...
+<div>
+
+    <label>Photos: </label>
+    <input type="file" name="image" accept="image/png, image/jpeg" />
+
+</div>
+...
+</form>
+
+<div class="row">
+    <div class="column">
+        <img src="../static/images/cotton.jpg" style="width:100%">
+        <img src="../static/images/Hardware.jpg" style="width:100%">
+        <img src="../static/images/koaialkabel.jpg" style="width:100%">
+        <img src="../static/images/kylie.jpg" style="width:100%">
+        <img src="../static/images/Model_Frau.jpg" style="width:100%">
+        <img src="../static/images/kylie.jpg" style="width:100%">
+        <img src="../static/images/pic1.png" style="width:100%">
+    </div>
+
+    <div class="column">
+        <img src="../static/images/spongebob.jpg" style="width:100%">
+        <img src="../static/images/cotton.jpg" style="width:100%">
+        <img src="../static/images/Hardware.jpg" style="width:100%">
+        <img src="../static/images/kylie.jpg" style="width:100%">
+        <img src="../static/images/Model_Frau.jpg" style="width:100%">
+        <img src="../static/images/spongebob.jpg" style="width:100%">
+    </div>
+
+
+    
+</div>
+
+
+
+</body>
+
+</html>
