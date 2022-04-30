@@ -34,7 +34,7 @@ import com.codeusingjava.service.ImgGalleryService;
 
 @Controller
 public class ImgGalleryController {
-	
+
 	@Value("${uploadDir}")
 	private String uploadFolder;
 
@@ -50,7 +50,7 @@ public class ImgGalleryController {
 
 	@PostMapping("/image/saveImageDetails")
 	public @ResponseBody ResponseEntity<?> createProduct(@RequestParam("name") String name,
-			@RequestParam("price") double price, @RequestParam("description") String description, Model model, HttpServletRequest request
+														 @RequestParam("price") double price, @RequestParam("description") String description, Model model, HttpServletRequest request
 			,final @RequestParam("image") MultipartFile file) {
 		try {
 			//String uploadDirectory = System.getProperty("user.dir") + uploadFolder;
@@ -91,7 +91,7 @@ public class ImgGalleryController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
-	
+
 	@GetMapping("/image/display/{id}")
 	@ResponseBody
 	void showImage(@PathVariable("id") Long id, HttpServletResponse response, Optional<ImgGallery> imageGallery)

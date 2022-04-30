@@ -19,16 +19,19 @@ public class ImgGallery {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false, unique = true)
 	private Long id;
-	
+
 	@Column(name = "name", nullable = false)
 	private String name;
 
-	
+
+	@Column(name = "price",nullable = false, precision = 10, scale = 2)
+	private double price;
+
 	@Lob
-    @Column(name = "Image", length = Integer.MAX_VALUE, nullable = true)
-    private byte[] image;
-    
-  
+	@Column(name = "Image", length = Integer.MAX_VALUE, nullable = true)
+	private byte[] image;
+
+
 	public ImgGallery() {}
 
 	public Long getId() {
@@ -39,7 +42,7 @@ public class ImgGallery {
 		this.id = id;
 	}
 
-		public String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -49,7 +52,13 @@ public class ImgGallery {
 
 
 
+	public double getPrice() {
+		return price;
+	}
 
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
 	public byte[] getImage() {
 		return image;
@@ -61,13 +70,12 @@ public class ImgGallery {
 
 	@Override
 	public String toString() {
-		return "ImgGallery [id=" + id + ", name=" + name + ", image=" + Arrays.toString(image)
+		return "ImgGallery [id=" + id + ", name=" + name + ", price=" + price + ", image=" + Arrays.toString(image)
 				+ "]";
 	}
 
 
-	
-   
+
+
+
 }
-
-
